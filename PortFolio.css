@@ -7,6 +7,14 @@
 article{
     font-family: 'Poppins',"Roboto", sans-serif;
 }
+#home {
+    z-index: 10;
+    transition: color 200ms linear, box-shadow 200ms linear;
+}
+#home.active{
+    background-color: #272727 !important;
+    box-shadow: 2px 2px 4px rgb(20, 20, 20);
+}
 body > *{
     background-color: #353535;
 }
@@ -15,7 +23,6 @@ body > *{
 }
 #home div:first-child{
     position: relative;
-    background-color: #353535;
     z-index: 2;
     transition: background-color 200ms linear, box-shadow 400ms linear;
 }
@@ -40,15 +47,18 @@ ul a:hover, .bi-list:hover{
 }
 
 .drop-down-small-screen{
-    /* display:none ; */
     position: absolute;
     transform: translateY(-100%);
     opacity: 0;
     z-index: 1;
+    transition: transform 300ms linear, opacity 600ms linear;
 }
-
+.drop-down-small-screen.active{
+    opacity: 1;
+    transform: translateY(0);
+}
 .myPhoto img{
-    width: 100%;
+    width: 80%;
 }
 .about img {
     width: 100%;
@@ -246,10 +256,7 @@ ul a:hover, .bi-list:hover{
 }
 
 /* Contact section */
-.contact-form > h2 {
-    font-size: 2rem;
-    text-align: center;
-}
+
 .contact-form > h2::after{
     content: " ";
     display: block;
@@ -275,8 +282,6 @@ ul a:hover, .bi-list:hover{
     border: 1px solid rgb(46, 46, 46);
     border-radius: 3px;
     padding: 2%;
-    display: block;
-    margin: 4% 0;
     caret-color: #f8f8f8;
     transition: box-shadow 200ms linear;
 }
@@ -301,6 +306,56 @@ ul a:hover, .bi-list:hover{
     font-family: "Poppins","Roboto",sans-serif;
     color: #664b18;
     text-decoration: underline;
+}
+
+footer > h3::after {
+    content: " ";
+    display: block;
+    border-bottom:3px solid #f3aa2b;
+    width: 25%;
+    margin: 0 auto;
+}
+
+footer > p{
+    color: #afafaf;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-align: center;
+}
+.sm-icons{
+    text-align: center;
+    padding: 6% 0;
+}
+.sm-icons > a {
+    display: inline-block;
+    /* border: 1px solid #feb633; */
+    font-size: 1.4rem;
+    width: 50px;
+    height: 50px;
+    margin: 0 2%;
+    border-radius: 50%;
+    background-color: #202020;
+    transition: background-color 400ms ease-in;
+}
+.sm-icons >a >i{
+    vertical-align: middle;
+    line-height: 50px;
+    color: #9f9f9f;
+    transition: color 400ms ease-in;
+}
+
+.sm-icons > a:hover{
+    background-color: #feb633;
+}
+.sm-icons > a:hover i{
+    color: #fff;
+}
+
+.arx_lancifer{
+    font-size: 1rem;
+    text-align: center;
+    background-color: #202020;
+    border-top: 1px solid #3f3f3f;
 }
 
 @media all and (max-width: 786px){

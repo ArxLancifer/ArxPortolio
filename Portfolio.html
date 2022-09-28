@@ -22,7 +22,7 @@
     <title>Document</title>
 </head>
 <body>
-        <header id="home">
+        <header id="home"  class="position-fixed w-100 border-top">
             <div  class="container-fluid nav-bar align-items-center justify-content-around d-flex w-100 border-bottom border-secondary">
                 <div class="top-container d-flex justify-content-between col-md-4 col-12 px-sm-5">
                     <img src="AC logo.png" alt="" class="logo">
@@ -30,7 +30,7 @@
                 </div>
                 <nav class="col-md-4 drop-down-lg-screen">
                     <ul class="list-unstyled d-flex justify-content-between mt-3 fs-6">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#top">Home</a></li>
                         <li><a href="#about-me">About</a></li>
                         <li><a href="#proj">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
@@ -41,7 +41,7 @@
             <div class="container-fluid drop-down-small-screen">
                 <nav>
                     <ul class="list-unstyled text-center w-75 mx-auto rounded-1 bg-dark py-4">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#top">Home</a></li>
                         <li><a href="#about-me">About</a></li>
                         <li><a href="#proj">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
@@ -52,22 +52,22 @@
         </header>
         
     
-    <div id="content-wrapper" class="py-5">
-        <div class="introduce d-flex justify-content-center p-5">
-            <section id="about-me" class="about text-light m-5 p-5">
+    <div id="content-wrapper" class="pt-5">
+        <div class="introduce d-flex flex-column flex-md-row justify-content-center align-items-center py-5">
+            <section id="about-me" class="about col-10 col-md-5 text-light py-2">
                 <h1>Hi. I'am Anestis</h1>
                 <h2>Your next Web Developer</h2>
             </section>
-            <div class="myPhoto">
+            <div class="myPhoto col-10 col-md-5">
                 <img src="http://placekitten.com/500/500" alt="">
             </div>
         </div>
         <div>
-        <section class="about-text text-light d-flex flex-column flex-md-row align-items-center justify-content-center">
-            <div class="col-10 col-md-6">
+        <section class="about-text text-light d-flex flex-column flex-md-row align-items-center justify-content-around">
+            <div class="col-10 col-md-5">
             <div class="about"><img src="AboutPNG.png" alt=""></div>
             </div>
-            <div  class="col-10 col-md-6">
+            <div  class="col-10 col-md-5">
             <article>
                 I have a passion for working with people, and I'm inspired to help others succeed. As a software
                 engineer, I have developed an enthusiasm for efficient and resilient designs. With over 10 years of
@@ -175,10 +175,11 @@
     </div>
     <div>
     <section class="contact-form">
-        <h2>Contact Me</h2>
-        <h3>Contact info</h3>
-        <section class="contact d-flex">
-            <div class="infos col-4 border">
+        <h2 class="text-center text-light">Contact Me</h2>
+        
+        <section class="contact d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <div class="infos col-11 col-md-4 fs-5 pt-5">
+                <h3 class="text-light">Contact info</h3>
                 <div>
                     <i class="fas fa-map-marker-alt"></i><span>Greece, Xanthi</span>
                 </div>
@@ -189,11 +190,11 @@
                     <i class="fas fa-globe-europe"></i><span>www.ArxLancifer.com</span>
                 </div>
             </div>
-            <div class="form col-6 border">
+            <div class="form col-11 col-md-6">
                 <h4>Get in touch</h4>
                 <form action="">
-                    <input type="text" class="d-block my-4 name" placeholder="Name">
-                    <input type="mail" class="d-block my-4  mail" placeholder="E-Mail">
+                    <input type="text" class="d-block my-4 w-50 name" placeholder="Name">
+                    <input type="mail" class="d-block my-4 w-50  mail" placeholder="E-Mail">
                     <textarea name="" id="" class="d-block  my-4 " placeholder="Type your message here"></textarea>
                 </form>
             </div>
@@ -202,16 +203,16 @@
     </section>
 </div>
     <footer id="contact">
-        <h3>Find me on</h3>
+        <h3 class="text-center text-light py-4">Find me on</h3>
         <p>Don't hesitate to reach out to me via links below. Let's talk.</p>
         <div class="sm-icons">
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-discord"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/anestis-christoforidis/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ArxLancifer"><i class="fab fa-github"></i></a>
+            <a href="https://discordapp.com/users/190929580092162050"><i class="fab fa-discord"></i></a>
+            <a href="https://twitter.com/ArxLancifer"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
-    <div class="arx_lancifer">
+    <div class="arx_lancifer text-light">
         <p>&copy; Arx Lancifer</p>
     </div>
     </div>

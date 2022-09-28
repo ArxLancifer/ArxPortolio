@@ -42,7 +42,7 @@ const swiper = new Swiper(".mySwiper", {
     const skillSection = document.querySelector('.skills');
     const skillCardPosition = skillSection.getBoundingClientRect().top; 
     const skillCards = document.querySelectorAll('.skill-list');
-    const topContainer = document.querySelector('.top-container')
+    const topContainer = document.querySelector('#home')
     const bodyPosition = document.querySelector('body').getBoundingClientRect().top;
     const screenPosition = window.innerHeight;
     if(skillCardPosition < screenPosition){
@@ -63,3 +63,26 @@ const swiper = new Swiper(".mySwiper", {
 }
 //Scroll animations call
 document.addEventListener('scroll', scrollDownSkills, 'once')
+
+
+//Dropdown menu
+function dropdown(){
+  const menu = document.querySelector('.drop-down-small-screen');
+  menu.classList.toggle("active");
+}
+document.querySelector(".bi-list").addEventListener('click', dropdown)
+document.addEventListener('click',(e)=>{
+  // if(!e.target.classList.value.includes('bi')){
+  //     const menu = document.querySelector('.drop-down-small-screen');
+  //     menu.classList.remove("active");
+  // }
+  menu.classList.remove("active");
+})
+
+function autoTyping(){
+  const myName = document.querySelector("#about-me h1");
+  const iDev = document.querySelector("#about-me h2");
+  
+}
+
+const typeInterval = setInterval(autoTyping,200)
