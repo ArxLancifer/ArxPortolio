@@ -79,10 +79,3 @@ document.addEventListener('click',(e)=>{
   menu.classList.remove("active");
 })
 
-function autoTyping(){
-  const myName = document.querySelector("#about-me h1");
-  const iDev = document.querySelector("#about-me h2");
-  
-}
-
-const typeInterval = setInterval(autoTyping,200)

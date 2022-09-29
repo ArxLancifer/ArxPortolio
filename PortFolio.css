@@ -58,7 +58,10 @@ ul a:hover, .bi-list:hover{
     transform: translateY(0);
 }
 .myPhoto img{
+    display: block;
     width: 80%;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 .about img {
     width: 100%;
