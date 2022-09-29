@@ -71,11 +71,28 @@ function dropdown(){
   menu.classList.toggle("active");
 }
 document.querySelector(".bi-list").addEventListener('click', dropdown)
-document.addEventListener('click',(e)=>{
-  // if(!e.target.classList.value.includes('bi')){
-  //     const menu = document.querySelector('.drop-down-small-screen');
-  //     menu.classList.remove("active");
-  // }
-  menu.classList.remove("active");
-})
 
+
+// Type Animation
+function delay(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, time);
+    });
+}
+async function textTypeAnimation(txt, target_element, speed){
+    let txt_array = txt.split("")
+    for (let i=0; i<txt_array.length; i++) {
+        await delay(speed);
+        target_element.textContent+=txt_array[i]
+    }
+}
+
+async function runTypeAnimation(){
+    const textH1 = "Hi. I am Anestis";
+    const textH2 = "Your next Web Developer";
+   await textTypeAnimation(textH1, document.querySelector("#about-me h1"),80)
+   await delay(500)
+   await textTypeAnimation(textH2, document.querySelector("#about-me h2"),80)
+}
+
+runTypeAnimation();

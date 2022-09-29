@@ -77,4 +77,24 @@ function scrollDownSkills(){
 //Scroll animations call
 document.addEventListener('scroll', scrollDownSkills, 'once')
 
+// Type Animation
+function delay(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, time);
+    });
+}
+async function textTypeAnimation(txt, target_element, speed){
+    let txt_array = txt.split("")
+    for (let i=0; i<txt_array.length; i++) {
+        await delay(speed);
+        target_element.textContent+=txt_array[i]
+    }
+}
 
+function runTypeAnimation(){
+    const textH1 = "Hi. I am Anestis";
+    const textH2 = "Your next Web Developer :)";
+    textTypeAnimation(textH1, document.querySelector("#about-me h1"),50)
+    delay(1000)
+    textTypeAnimation(x, document.querySelector("#about-me h2"),50)
+}
