@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- Boostrap Min CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- font awasome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@100&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="mobile-main-style.css">
-    <link rel="stylesheet" href="style-mob.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="PortFolio.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
-    <script src="main.js" defer></script>
+    <script src="Portfolio.js" defer></script>
     <title>Document</title>
 </head>
-
 <body>
-    <header id="home">
-        <div  class="nav-bar">
-            <div class="top-container">
-                <img src="AC logo.png" alt="" class="logo">
-                <button class="dropdown-btn"><i  class="text-light fa fa-bars"></i></button>
+        <header id="home"  class="position-fixed w-100 border-top">
+            <div  class="container-fluid nav-bar align-items-center justify-content-around d-flex w-100 border-bottom border-secondary">
+                <div class="top-container d-flex justify-content-between col-md-4 col-12 px-sm-5">
+                    <img src="AC logo.png" alt="" class="logo">
+                    <i class="d-block mt-2 fs-2 bi bi-list"></i>
+                </div>
+                <nav class="col-md-4 drop-down-lg-screen">
+                    <ul class="list-unstyled d-flex justify-content-between mt-3 fs-6">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#proj">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="dropdown-menu">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about-me">About</a></li>
-                    <li><a href="#proj">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="container-fluid drop-down-small-screen">
+                <nav>
+                    <ul class="list-unstyled text-center w-75 mx-auto rounded-1 bg-dark py-4">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#about-me">About</a></li>
+                        <li><a href="#proj">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+    
+    <div id="content-wrapper" class="pt-5">
+        <div class="introduce d-flex flex-column flex-md-row justify-content-center align-items-center px-5 pt-5">
+            <section id="about-me" class="about col-10 col-md-5 text-light">
+                <h1 class="text-center"></h1>
+                <h2 class="text-center"></h2>
+            </section>
+            <div class="myPhoto col-10 col-md-5">
+                <img src="./my_pic.png" alt="">
+            </div>
         </div>
-    </header>
-    <main>
-        <section id="about-me" class="about">
-            <h1>Hi. I'am Anestis</h1>
-            <h2>Your next Web Developer</h2>
-            <div class="myPhoto"><img src="http://placekitten.com/500/500" alt=""></div>
-
-        </section>
-        <section class="about-text">
-            <div class="about-bg"><img src="AboutPNG.png" alt=""></div>
-            <h3>About me</h3>
+        <div>
+        <section class="about-text text-light d-flex flex-column flex-md-row align-items-center justify-content-around">
+            <div class="col-10 col-md-5">
+            <div class="about"><img src="AboutPNG.png" alt=""></div>
+            </div>
+            <div  class="col-10 col-md-5">
             <article>
                 I have a passion for working with people, and I'm inspired to help others succeed. As a software
                 engineer, I have developed an enthusiasm for efficient and resilient designs. With over 10 years of
@@ -59,135 +78,148 @@
                 was the spark that ignited my passion for coding. I want to create exciting technologies that make a
                 positive impact for people.
             </article>
-            <a href="https://resume.io/r/7ULN2hq0I" target="_blank">
-                <div class="resume-btn">Resume</div>
-            </a>
+            <button class="resume-btn my-4"><a href="https://resume.io/r/7ULN2hq0I" target="_blank">
+                Resume
+            </a></button>
+            </div>
         </section>
-        <section id="proj" class="projects">
-            <h3>Projects</h3>
-            <article class="projects-article">
-                Take a look at some projects I have worked on during my jurney. Feel free to take a look.
-            </article>
-            <section class="projects-slider">
-                <div class="swiper-container mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="project-container">
-                                <h3>Hotel Landing Page</h3>
-                                <img src="LandingPage.jpg" alt="">
-                                <div class="project-description">
-                                    <div class="btn-projectLink">Watch</div>
-                                    <p>Landing page for apartments to rent</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-container">
-                                <h3>MTG Deck Builder</h3>
-                                <img src="MTG.jpg" alt="">
-                                <div class="project-description">
-                                    <div class="btn-projectLink">Watch</div>
-                                    <p>Fullstack web application ,API with CRUD opperation where you can build and save
-                                        you deck.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-container">
-                                <h3>GeoGame</h3>
-                                <img src="GeoGame.jpg" alt="">
-                                <div class="project-description">
-                                    <div class="btn-projectLink">Watch</div>
-                                    <p>Geography game in which you can test your knowledge on geography.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="project-container">
-                                <h3>Project Name</h3>
-                                <img src="https://via.placeholder.com/150" alt="">
-                                <div class="project-description">
-                                    <div class="btn-projectLink">Watch</div>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, explicabo.</p>
-                                </div>
+    </div>
+    <section id="proj" class="projects p-5">
+        <h3 class="text-light">Projects</h3>
+        <div class="pseudo-border"></div>
+        <article class="projects-article text-light">
+            Take a look at some projects I have worked on during my jurney. Feel free to take a look.
+        </article>
+        <section class="projects-slider">
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide">
+                        <div class="project-container">
+                            <h3>MTG Deck Builder</h3>
+                            <img src="MTG.jpg" alt="">
+                            <div class="project-description">
+                                <div class="btn-projectLink">Watch</div>
+                                <p>Fullstack web application ,API with CRUD opperation where you can build and save
+                                    you deck.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide">
+                        <div class="project-container">
+                            <h3>GeoGame</h3>
+                            <img src="GeoGame.jpg" alt="">
+                            <div class="project-description">
+                                <div class="btn-projectLink">Watch</div>
+                                <p>Geography game in which you can test your knowledge on geography.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-container">
+                            <h3>Hotel Landing Page</h3>
+                            <img src="LandingPage.jpg" alt="">
+                            <div class="project-description">
+                                <div class="btn-projectLink">Watch</div>
+                                <p>Landing page for apartments to rent</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="project-container">
+                            <h3>Project Name</h3>
+                            <img src="https://via.placeholder.com/150" alt="">
+                            <div class="project-description">
+                                <div class="btn-projectLink">Watch</div>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, explicabo.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </section>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
-        <section id="skills" class="skills">
-            <div class="skill-card front-end">
-                <h3>Front-End</h3>
-                <div class="skill-list" id="asd">
+    </section>
+    <div>
+        <section id="skills" class="skills d-flex flex-column flex-md-row  justify-content-between align-items-center p-4 my-5">
+            <div class="skill-card front-end col-10 col-md-5">
+                <h3 class="text-light">Front-End</h3>
+                <div class="skill-list my-5 py-4">
                     <div class="img-wrapper">
                         <img
                             src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-front-end-ux-and-ui-flaticons-flat-flat-icons.png" />
                     </div>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>BootStrap</li>
                         <li>Javascript (ES6)</li>
+                        <li>And many more efficient libraries</li>
                     </ul>
                 </div>
             </div>
-            <div class="skill-card back-end">
-                <h3>Back-End</h3>
-                <div class="skill-list">
+            <div class="skill-card back-end col-10 col-md-5">
+                <h3 class="text-light">Back-End</h3>
+                <div class="skill-list my-5 py-4">
                     <div class="img-wrapper">
                         <img src="https://img.icons8.com/color/48/000000/backend-development.png" />
                     </div>
-                    <ul>
+                    <ul class="list-unstyled">
                         <li>NodeJs</li>
                         <li>ExpressJs</li>
-                        <li>APIs</li>
+                        <li>Rest APIs</li>
                         <li>MongoDB & Mongoose</li>
                         <li>BScript Auth</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="contact-form">
-            <h2>Contact Me</h2>
-            <h3>Contact info</h3>
-            <section class="contact">
-                <div class="infos">
-                    <div>
-                        <i class="fas fa-map-marker-alt"></i><span>Greece, Xanthi</span>
-                    </div>
-                    <div>
-                        <i class="far fa-envelope"></i><span>a_christoforidis.hotmail.com</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-globe-europe"></i><span>www.ArxLancifer.com</span>
-                    </div>
+    </div>
+    <div>
+    <section class="contact-form">
+        <h2 class="text-center text-light">Contact Me</h2>
+        
+        <section class="contact d-flex flex-column flex-md-row justify-content-center align-items-center">
+            <div class="infos col-11 col-md-4 fs-5 pt-5">
+                <h3 class="text-light">Contact info</h3>
+                <div>
+                    <i class="fas fa-map-marker-alt"></i><span>Greece, Xanthi</span>
                 </div>
-                <div class="form">
-                    <h4>Get in touch</h4>
-                    <form action="">
-                        <input type="text" class="name" placeholder="Name">
-                        <input type="mail" class="mail" placeholder="E-Mail">
-                        <textarea name="" id="" placeholder="Type your message here"></textarea>
-                    </form>
+                <div>
+                    <i class="far fa-envelope"></i><span>a_christoforidis.hotmail.com</span>
                 </div>
-            </section>
-        </section>
-        <footer id="contact">
-            <h3>Find me on</h3>
-            <p>Don't hesitate to reach out to me via links below. Let's talk.</p>
-            <div class="sm-icons">
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                <a href=""><i class="fab fa-github"></i></a>
-                <a href=""><i class="fab fa-discord"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
+                <div>
+                    <i class="fas fa-globe-europe"></i><span>www.ArxLancifer.com</span>
+                </div>
             </div>
-        </footer>
-        <div class="arx_lancifer">
-            <p>&copy; Arx Lancifer</p>
+            <div class="form col-11 col-md-6">
+                <h4>Get in touch</h4>
+                <form action="">
+                    <input type="text" id="senderName" class="d-block my-4 w-50 text-light name" placeholder="Name">
+                    <input type="mail" id="senderMail" class="d-block my-4 w-50 text-light mail" placeholder="E-Mail">
+                    <textarea name="" id="senderMessage" class="d-block text-light  my-4 " placeholder="Type your message here"></textarea>
+                    <button type="submit" class="btn btn-warning fs-4 sendMail">Send</button>
+                </form>
+            </div>
+        </section>
+    
+    </section>
+</div>
+    <footer id="contact">
+        <h3 class="text-center text-light py-4">Find me on</h3>
+        <p>Don't hesitate to reach out to me via links below. Let's talk.</p>
+        <div class="sm-icons">
+            <a href="https://www.linkedin.com/in/anestis-christoforidis/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/ArxLancifer"><i class="fab fa-github"></i></a>
+            <a href="https://discordapp.com/users/190929580092162050"><i class="fab fa-discord"></i></a>
+            <a href="https://twitter.com/ArxLancifer"><i class="fab fa-twitter"></i></a>
         </div>
-    </main>
+    </footer>
+    <div class="arx_lancifer text-light">
+        <p>&copy; Arx Lancifer</p>
+    </div>
+    </div>
+    
+    
 </body>
-
 </html>

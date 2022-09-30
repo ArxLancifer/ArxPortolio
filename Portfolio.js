@@ -96,3 +96,33 @@ async function runTypeAnimation(){
 }
 
 runTypeAnimation();
+
+
+
+// MailJS
+document.querySelector(".sendMail").addEventListener("click",(e)=>{
+  e.preventDefault()
+  sendMail()
+})
+
+emailjs.init('v9d8T0AAgC80WuYjk');
+
+async function sendMail(){
+  const senderName = document.querySelector("#senderName").value;
+  const senderMail = document.querySelector("#senderMail").value;
+  const senderMessage = document.querySelector("#senderMessage").value;
+  if(!senderName || !sendMail || !senderMessage){
+    alert("Please fill up the form");
+    return
+  }
+ let sendResponse = await emailjs.send("service_zlhq85p","template_bofut1c",{
+  from_name: senderName,
+  email_id: senderMail,
+  message: senderMessage,
+  });
+ if(sendResponse.status == 200){
+  alert("Mail has sent. Ill respond as soon as possible!")
+ }else alert("Something went wrong :(")
+}
+
+
