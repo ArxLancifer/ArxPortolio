@@ -151,6 +151,13 @@ ul a:hover, .bi-list:hover{
   }
   .project-description > p {
     font-family: 'Poppins', 'Roboto', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .project-description > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
   }
   .project-container:hover .project-description{
     transform: translateY(-100%);
