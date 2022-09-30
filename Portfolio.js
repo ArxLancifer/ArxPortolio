@@ -121,7 +121,7 @@ async function sendMail(){
   message: senderMessage,
   });
  if(sendResponse.status == 200){
-  alert("Mail has sent. Ill respond as soon as possible!")
+  alert("Mail has sent. I will contact you back as soon as possible!")
  }else alert("Something went wrong :(")
 }
 
