@@ -151,8 +151,11 @@ ul a:hover, .bi-list:hover{
   }
   .project-description > p {
     font-family: 'Poppins', 'Roboto', sans-serif;
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
+  }
+  .project-description > p {
+    margin-top: 1rem;
   }
   .project-description > a {
     text-decoration: none;
@@ -186,9 +189,7 @@ ul a:hover, .bi-list:hover{
     box-shadow:2px 2px 3px rgb(117, 117, 117);
     transform: scale(1.02);
   }
-  .project-description > p {
-    margin-top: 30%;
-  }
+
   .projects > h3 {
     width: 40%;
     text-align: center;
@@ -204,7 +205,7 @@ ul a:hover, .bi-list:hover{
   .pseudo-border{
     content: "";
     border-bottom:3px solid #f3aa2b;
-  }
+  }30%
   .projects-article{
     padding: 8% 0;
     font-family: 'Poppins','Roboto', sans-serif;
@@ -253,7 +254,6 @@ ul a:hover, .bi-list:hover{
     display: block;
     margin: 0 auto;
     padding: 0 1%;
-    background-color: #353535;
 }
 /*Card scroll animations*/
 .front-end > .skill-list{
