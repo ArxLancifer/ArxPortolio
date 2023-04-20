@@ -30,6 +30,18 @@ body > *{
     z-index: 2;
     transition: background-color 200ms linear, box-shadow 400ms linear;
 }
+
+h3.orange-ul{
+    width: 10rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.orange-ul::after{
+    content: " ";
+    border: 2px solid #f3aa2b !important;
+    display: block;
+}
+
 .top-container img{
     width: 50px;
 }
@@ -131,6 +143,10 @@ ul a:hover, .bi-list:hover{
     border-radius: 5px;
     transition: transform 400ms ease;
   }
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.5);
+  }
   .project-container{
     position: relative;
     width: 100%;
@@ -169,12 +185,7 @@ ul a:hover, .bi-list:hover{
   .project-container:hover img{
     transform: scale(1.2);
   }
-  .project-container > h3 {
-    text-align: center;
-    width: 100%;
-    color: #202020;
-    top: 5%; 
-  }
+  
   .btn-projectLink{
     margin: 50% auto 0 auto;
     background-color: rgb(255, 102, 0);
@@ -190,22 +201,9 @@ ul a:hover, .bi-list:hover{
     transform: scale(1.02);
   }
 
-  .projects > h3 {
-    width: 40%;
-    text-align: center;
-    padding:1% 0;
-    margin: 0 auto;
-    font-size: 2rem;
-    /* border-bottom:3px solid #f3aa2b; */
-  }
-  .pseudo-border{
-    width: 20%;
-    margin: 0 auto;
-  }
-  .pseudo-border{
-    content: "";
-    border-bottom:3px solid #f3aa2b;
-  }30%
+  
+  
+  
   .projects-article{
     padding: 8% 0;
     font-family: 'Poppins','Roboto', sans-serif;
@@ -218,10 +216,6 @@ ul a:hover, .bi-list:hover{
     overflow-x: hidden;
 }
 
-.skill-card > h3{
-    border-bottom:2px solid #feb633;
-    display: inline-block;
-}
 .skill-list{
     position: relative;
     border: 1px solid #fff;
@@ -270,13 +264,13 @@ ul a:hover, .bi-list:hover{
 
 /* Contact section */
 
-.contact-form > h2::after{
+/* .contact-form > h2::after{
     content: " ";
     display: block;
     border-bottom: 4px solid #f3aa2b;
     width: 25%;
-    margin: 4% auto;
-}
+    margin: 1% auto;
+} */
 .infos{
     color: #828b94;
     font-weight: 600;
@@ -321,14 +315,6 @@ ul a:hover, .bi-list:hover{
     text-decoration: underline;
 }
 
-footer > h3::after {
-    content: " ";
-    display: block;
-    border-bottom:3px solid #f3aa2b;
-    width: 25%;
-    margin: 0 auto;
-}
-
 footer > p{
     color: #afafaf;
     font-family: 'Poppins';
@@ -362,6 +348,11 @@ footer > p{
 }
 .sm-icons > a:hover i{
     color: #fff;
+}
+
+.skill_icons{
+    width: 4rem;
+    font-size: 3.4rem;
 }
 
 .arx_lancifer{

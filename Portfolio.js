@@ -3,8 +3,8 @@ const swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 80,
     slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
+    // loop: true,
+    // loopFillGroupWithBlank: true,
     breakpoints: {
       // when window width is >= 320px
       320: {
